@@ -55,10 +55,12 @@ a {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
   margin: 0;
+  margin-bottom: 60px;
   color: #ffffff;
   text-transform: uppercase;
   backface-visibility: hidden;
@@ -108,4 +110,28 @@ a {
   100% {
     transform: translateX(0);
   }
+}
+
+.button:link,
+.button:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button--white {
+  color: #777777;
+  background-color: #ffffff;
 }
