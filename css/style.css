@@ -112,8 +112,21 @@ a {
   }
 }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .button:link,
 .button:visited {
+  position: relative;
   display: inline-block;
   text-transform: uppercase;
   padding: 15px 40px;
@@ -131,7 +144,34 @@ a {
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
+.button::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  transition: all 0.4s;
+}
+
+.button:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
 .button--white {
   color: #777777;
   background-color: #ffffff;
+}
+
+.button--white::after {
+  background-color: #ffffff;
+}
+
+.button--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }
