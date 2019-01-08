@@ -7,15 +7,23 @@ Dark green: #28b485
 
 */
 
-html { box-sizing: border-box; }
-*, *::before, *::after { box-sizing: inherit; }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
 
 body {
-  margin: 0;
-  padding: 30px;
+  padding: 3rem;
   font-family: "Lato", Arial, sans-serif;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.7;
   color: #777777;
 }
@@ -42,12 +50,12 @@ a {
 
 .header__logo {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .header__logo-img {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .header__text-box {
@@ -59,8 +67,7 @@ a {
 }
 
 .heading-primary {
-  margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
   color: #ffffff;
   text-transform: uppercase;
   backface-visibility: hidden;
@@ -68,28 +75,28 @@ a {
 
 .heading-primary__main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
   animation: moveInLeft 1s ease-out;
 }
 
 .heading-primary__sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700px;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.75rem;
   animation: moveInRight 1s ease-out;
 }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -100,11 +107,11 @@ a {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -115,7 +122,7 @@ a {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   100% {
@@ -129,19 +136,20 @@ a {
   position: relative;
   display: inline-block;
   text-transform: uppercase;
-  padding: 15px 40px;
-  border-radius: 100px;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
   transition: all 0.2s;
+  font-size: 1.6rem;
 }
 
 .button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
 }
 
 .button:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
 }
 
 .button::after {
@@ -153,7 +161,7 @@ a {
   z-index: -1;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.4s;
 }
 
