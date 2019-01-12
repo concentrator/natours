@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass scss/style.scss css/style.css --output-style=expanded -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/concentrator/natours.git"
+  },
+  "author": "skywalker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/concentrator/natours/issues"
+  },
+  "homepage": "https://github.com/concentrator/natours#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
