@@ -31,7 +31,7 @@
   }
 
   &__text {
-    transform: skewX(12deg);
+    transform: skewX(12deg) perspective(1px) translateZ(0);
     backface-visibility: hidden;
   }
 
