@@ -456,6 +456,7 @@ body {
 }
 
 .story__shape {
+  position: relative;
   width: 15rem;
   height: 15rem;
   float: left;
@@ -467,12 +468,40 @@ body {
 }
 
 .story__img {
+  position: relative;
+  left: 50%;
   height: 100%;
   max-width: initial;
+  transform: translate(-50%) scale(1.4);
+  transition: transform 0.5s;
 }
 
 .story__text {
   transform: skewX(12deg);
+  backface-visibility: hidden;
+}
+
+.story__caption {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 20%);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.story:hover .story__img {
+  transform: translate(-50%) scale(1);
+  filter: blur(3px) brightness(80%);
+}
+
+.story:hover .story__caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
 }
 
 .header {
