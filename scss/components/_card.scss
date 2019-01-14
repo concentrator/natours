@@ -22,6 +22,7 @@
 
     &--front {
       background-color: $color-white;
+      z-index: 1;
     }
 
     &--back {
@@ -50,11 +51,14 @@
     }
   }
 
-  &:hover &__side--front {
+  &:hover &__side--front,
+  &:focus-within &__side--front, {
     transform: rotateY(-180deg);
+
   }
 
-  &:hover &__side--back {
+  &:hover &__side--back,
+  &:focus-within &__side--back {
     transform: rotateY(0);
   }
 
