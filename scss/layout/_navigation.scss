@@ -1,5 +1,9 @@
 .navigation {
 
+  &__checkbox {
+    display: none;
+  }
+
   &__button {
     position: fixed;
     top: 6rem;

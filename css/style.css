@@ -582,6 +582,19 @@ input[type="radio"].visually-hidden {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 300;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup:target .popup__content {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
 }
 
 .popup__content {
@@ -590,11 +603,12 @@ input[type="radio"].visually-hidden {
   top: 50%;
   width: 75%;
   margin: 0 auto;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(0.25);
   background-color: #ffffff;
   box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   overflow: hidden;
+  transition: all 0.4s 0.2s;
 }
 
 .popup__content::after {
@@ -626,6 +640,38 @@ input[type="radio"].visually-hidden {
   column-rule: 1px solid #eeeeee;
   hyphens: auto;
   margin-bottom: 4rem;
+}
+
+.popup__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+.popup__close::before, .popup__close::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 3px;
+  position: absolute;
+  top: 7px;
+  background-color: #000000;
+  transition: all 0.2s;
+}
+
+.popup__close::before {
+  transform: rotate(45deg);
+}
+
+.popup__close::after {
+  transform: rotate(-45deg);
+}
+
+.popup__close:hover::before, .popup__close:hover::after {
+  background-color: #55c57a;
 }
 
 .story {
@@ -818,6 +864,10 @@ input[type="radio"].visually-hidden {
 
 .row .col-3-of-4 {
   width: calc((100% - 3 * 6rem) * 3 / 4 + 2 * 6rem);
+}
+
+.navigation__checkbox {
+  display: none;
 }
 
 .navigation__button {
