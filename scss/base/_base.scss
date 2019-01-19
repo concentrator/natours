@@ -24,6 +24,14 @@ html {
   }
 }
 
+body {
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
 img {
   max-width: 100%;
 }
