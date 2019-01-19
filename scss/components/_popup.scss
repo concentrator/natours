@@ -25,11 +25,6 @@
       transform: translateY(0) scale(1);
       margin-bottom: 2rem;
     }
-
-    @include respond(phone) {
-      top: 0;
-      margin-bottom: 0;
-    }
   }
 
   &__content {
@@ -53,7 +48,6 @@
 
     @include respond(phone) {
       width: 100%;
-      border-radius: 0;
     }
   }
 
