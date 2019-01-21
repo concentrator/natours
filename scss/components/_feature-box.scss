@@ -17,7 +17,11 @@
   &__icon {
     font-size: 6rem;
     margin-bottom: 0.5rem;
-    @include text-gradient-color($color-primary-light, $color-primary-dark);
+    color: $color-primary;
+
+    @supports (-webkit-background-clip: text) {
+      @include text-gradient-color($color-primary-light, $color-primary-dark);
+    }
 
     @include respond(tab-port) {
       margin-bottom: 0;

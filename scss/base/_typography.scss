@@ -43,8 +43,12 @@ body {
   font-weight: 700;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
-  @include text-gradient-color($color-primary-light, $color-primary-dark);
   transition: all 0.2s;
+  color: $color-primary;
+
+  @supports (-webkit-background-clip: text) {
+    @include text-gradient-color($color-primary-light, $color-primary-dark);
+  }
 
   @include respond(tab-port) {
     font-size: 3rem;
