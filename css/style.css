@@ -209,6 +209,14 @@ input[type="radio"].visually-hidden {
   text-align: center !important;
 }
 
+.u-padding-side-small {
+  padding: 0 2rem;
+}
+
+.u-padding-side-medium {
+  padding: 0 4rem;
+}
+
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important;
 }
@@ -589,6 +597,7 @@ input[type="radio"].visually-hidden {
     float: left;
     width: 33.33334%;
     box-shadow: 0 1.5rem 3rem 0 rgba(0, 0, 0, 0.2);
+    outline-offset: 1rem;
   }
 }
 
@@ -637,8 +646,21 @@ input[type="radio"].visually-hidden {
   z-index: 10;
 }
 
+@media (max-width: 56.25em) {
+  .composition__photo:hover {
+    transform: scale(1.45);
+    outline: 1rem solid #55c57a;
+  }
+}
+
 .composition:hover .composition__photo:not(:hover) {
   transform: scale(0.95);
+}
+
+@media (max-width: 56.25em) {
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(1.05);
+  }
 }
 
 .feature-box {

@@ -15,6 +15,7 @@
       float: left;
       width: 33.33334%;
       box-shadow: 0 1.5rem 3rem 0 rgba($color-black, 0.2);
+      outline-offset: 1rem;
     }
 
     &--p1 {
@@ -54,10 +55,19 @@
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem 0 rgba($color-black, 0.5);
       z-index: 10;
+
+      @include respond(tab-port) {
+        transform: scale(1.45);
+        outline: 1rem solid $color-primary;
+      }
     }
   }
 
   &:hover &__photo:not(:hover) {
     transform: scale(0.95);
+
+    @include respond(tab-port) {
+      transform: scale(1.05);
+    }
   }
 }
