@@ -1196,8 +1196,9 @@ input[type="radio"].visually-hidden {
 }
 
 .row {
-  max-width: 114rem;
+  max-width: 118rem;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .row:not(:last-child) {
@@ -1213,7 +1214,6 @@ input[type="radio"].visually-hidden {
 @media (max-width: 56.25em) {
   .row {
     max-width: 50rem;
-    padding: 0 2rem;
   }
 }
 
