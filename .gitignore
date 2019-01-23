@@ -6,4 +6,7 @@
 *.psd
 *.sublime*
 node_modules/
+css/*comp.css
+css/*concat.css
+css/*prefix.css
 Thumbs.db
